@@ -8,18 +8,21 @@ export const Footer = () => {
                 site {
                     siteMetadata {
                         author
+                        social {
+                            github
+                        }
                     }
                 }
             }
         `
     );
-    const { author } = site.siteMetadata;
+    const { author, social } = site.siteMetadata;
 
     return (
         <footer>
             © {new Date().getFullYear()}
             {` `}
-            <a href={`https://github.com/${author}`}>{author}</a>, Built with
+            <a href={`https://github.com/${social.github}`}>{author}</a>, Built with
             {` `}
             <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
