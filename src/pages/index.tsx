@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql, type HeadFC, type PageProps, Link } from 'gatsby';
 import { Layout } from '../components/layout';
 import { Seo } from '../components/seo';
@@ -21,7 +21,7 @@ interface DataProps {
     };
 }
 
-const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
+const IndexPage = ({ data }: PageProps<DataProps>) => {
     const posts = data.allMarkdownRemark.nodes;
 
     if (posts.length === 0) {
@@ -66,10 +66,6 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
     );
 };
 
-export default IndexPage;
-
-export const Head: HeadFC = () => <Seo title="All posts" />;
-
 export const pageQuery = graphql`
     {
         allMarkdownRemark(
@@ -89,3 +85,7 @@ export const pageQuery = graphql`
         }
     }
 `;
+
+export default IndexPage;
+
+export const Head: HeadFC = () => <Seo title="All posts" />;
