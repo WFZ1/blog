@@ -6,6 +6,7 @@ export const Header = () => {
         <nav>
             <Link to="/">Home</Link>
             <Link to="/news">News</Link>
+            <Link to="/сurrency">Currency</Link>
         </nav>
     );
 };

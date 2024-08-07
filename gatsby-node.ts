@@ -19,6 +19,11 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
                 process.env.NEWS_API_KEY
             }&pageSize=10`
         );
+
+        if (!response.ok) {
+            throw Error(`News API request failed with status ${response.status}`);
+        }
+
         const { articles } = await response.json();
 
         articles.forEach((article: Article) => {
