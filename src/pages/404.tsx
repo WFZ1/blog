@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, HeadFC, PageProps } from 'gatsby';
+import { Link, HeadFC } from 'gatsby';
 import { Layout } from '../components/layout';
 import { Seo } from '../components/seo';
 
-const NotFoundPage: React.FC<PageProps> = () => {
+const NotFoundPage = () => {
     return (
         <Layout>
             <h1>Page not found</h1>
