@@ -1,3 +1,58 @@
+import 'dotenv/config';
+
+interface ArticleSource {
+    id: string;
+    name: string;
+}
+
+interface Article {
+    source: ArticleSource;
+    author: string | null;
+    title: string;
+    description: string;
+    url: string;
+    urlToImage: string | null;
+    publishedAt: string;
+    content: string;
+}
+
+const getFormattedDate = () => {
+    const date = new Date();
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+
+    return `${year}-${month}-00`;
+};
+
+exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => {
+    const { createNode } = actions;
+
+    try {
+        const response = await fetch(
+            `https://newsapi.org/v2/everything?q=frontend AND react&from=${getFormattedDate()}&sortBy=popularity&apiKey=${
+                process.env.NEWS_API_KEY
+            }&pageSize=10`
+        );
+        const { articles } = await response.json();
+
+        articles.forEach((article: Article) => {
+            const nodeData = {
+                ...article,
+                id: createNodeId(`news-article-${article.url}`),
+                internal: {
+                    type: 'NewsArticle',
+                    contentDigest: createContentDigest(article),
+                },
+            };
+
+            createNode(nodeData);
+        });
+    } catch (error) {
+        console.error('Error fetching news data:', error);
+    }
+};
+
 /**
  * @type {import('gatsby').GatsbyNode['createSchemaCustomization']}
  */
