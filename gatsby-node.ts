@@ -1,20 +1,5 @@
 import 'dotenv/config';
-
-interface ArticleSource {
-    id: string;
-    name: string;
-}
-
-interface Article {
-    source: ArticleSource;
-    author: string | null;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string | null;
-    publishedAt: string;
-    content: string;
-}
+import { Article } from './src/types';
 
 const getFormattedDate = () => {
     const date = new Date();

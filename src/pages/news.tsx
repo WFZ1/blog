@@ -1,23 +1,8 @@
 import React from 'react';
-import { Link, HeadFC, graphql, PageProps } from 'gatsby';
+import { HeadFC, graphql, PageProps } from 'gatsby';
 import { Layout } from '../components/layout';
 import { Seo } from '../components/seo';
-
-interface ArticleSource {
-    id: string;
-    name: string;
-}
-
-interface Article {
-    source: ArticleSource;
-    author: string | null;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string | null;
-    publishedAt: string;
-    content: string;
-}
+import { Article } from '../types';
 
 interface DataProps {
     allNewsArticle: {
@@ -45,9 +30,7 @@ const NewsPage = ({ data }: PageProps<DataProps>) => {
                             <article itemScope itemType="http://schema.org/Article">
                                 <header>
                                     <h2>
-                                        <Link to={article.url} itemProp="url">
-                                            <span itemProp="headline">{article.title}</span>
-                                        </Link>
+                                        <a href={article.url}>{article.title}</a>
                                     </h2>
                                     <small>{article.publishedAt}</small>
                                 </header>
