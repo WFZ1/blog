@@ -2,12 +2,16 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: `blog`,
+        title: `Blog`,
         description: `Blog about software engineering`,
-        author: 'WFZ1',
+        author: {
+            name: `Pavlo Skumenko`,
+            summary: `who lives and works in Ukraine building useful things.`,
+        },
         social: {
             x: 'Pa7sha',
             github: 'WFZ1',
+            linkedin: 'pavlo-skumenko',
         },
         icon: 'favicon.png',
     },
