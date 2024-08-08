@@ -23,13 +23,13 @@ const NewsPage = ({ data }: PageProps<DataProps>) => {
 
     return (
         <Layout>
-            <ul style={{ listStyle: 'none' }}>
+            <ul className="list-none">
                 {articles.map((article) => {
                     return (
-                        <li key={article.url}>
+                        <li key={article.url} className="mb-10">
                             <article itemScope itemType="http://schema.org/Article">
                                 <header>
-                                    <h2>
+                                    <h2 className="text-sky-800 font-medium text-2xl">
                                         <a href={article.url}>{article.title}</a>
                                     </h2>
                                     <small>{article.publishedAt}</small>

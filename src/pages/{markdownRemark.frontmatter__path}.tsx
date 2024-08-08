@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data }: PageProps<DataProps>) => {
                     <p>{post.frontmatter.date}</p>
                 </header>
                 <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
-                <hr />
+                <hr className="m-8" />
                 <footer>
                     <Bio />
                 </footer>

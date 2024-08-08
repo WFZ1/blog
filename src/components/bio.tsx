@@ -21,7 +21,7 @@ export const Bio = () => {
     const { author, social } = site.siteMetadata;
 
     return (
-        <div>
+        <div className="flex align-top items-start">
             <StaticImage
                 formats={['auto', 'webp', 'avif']}
                 src="../images/profile-pic.jpg"
@@ -29,6 +29,7 @@ export const Bio = () => {
                 height={50}
                 quality={95}
                 alt="Profile picture"
+                className="rounded-full shrink-0 mr-2"
             />
             {author.name && (
                 <p>
