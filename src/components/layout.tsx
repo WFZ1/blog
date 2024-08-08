@@ -9,7 +9,7 @@ export const Layout = ({ children }: LayoutProps) => {
     return (
         <>
             <Header />
-            <main>{children}</main>
+            <main className="flex-auto">{children}</main>
             <Footer />
         </>
     );
