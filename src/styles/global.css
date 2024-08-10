@@ -15,7 +15,9 @@ html {
 }
 
 body {
-    @apply h-full text-base text-gray-700 font-serif;
+    @apply h-full text-base text-gray-700;
+
+    font-family: 'Noto Serif', serif;
 }
 
 hr {
@@ -40,7 +42,9 @@ h3,
 h4,
 h5,
 h6 {
-    @apply mt-6 mb-6 font-sans tracking-tight leading-[1.1];
+    @apply mt-6 mb-6 tracking-tight leading-[1.1];
+
+    font-family: 'Inter', sans-serif;
 }
 
 h2,

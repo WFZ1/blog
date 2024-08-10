@@ -16,6 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.0.20",
+    "@fontsource/noto-serif": "^5.0.20",
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.4.5",
     "gatsby": "^5.13.5",
