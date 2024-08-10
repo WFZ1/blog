@@ -36,13 +36,13 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
     return (
         <Layout>
             <Bio />
-            <ul className="list-none mt-10">
+            <ul className="mt-10">
                 {posts.map((post) => {
                     return (
                         <li key={post.id} className="mb-10">
                             <article itemScope itemType="http://schema.org/Article">
                                 <header>
-                                    <h2 className="text-sky-800 font-medium text-2xl">
+                                    <h2 className="text-sky-800 text-2xl">
                                         <Link to={post.frontmatter.path} itemProp="url">
                                             <span itemProp="headline">{post.frontmatter.title}</span>
                                         </Link>

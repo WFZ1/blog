@@ -18,7 +18,7 @@ export const Footer = () => {
     const { social } = site.siteMetadata;
 
     return (
-        <footer className="p-4 text-center text-gray-800">
+        <footer className="p-4 text-center">
             © {new Date().getFullYear()}
             {` `}
             <a href={`https://github.com/${social.github}`}>{social.github}</a>, Built with

@@ -32,12 +32,12 @@ const CurrencyPage = ({ serverData }: CurrencyPageProps) => {
 
     return (
         <Layout>
-            <ul className="list-none">
+            <ul>
                 {coins.map((coin) => (
                     <li key={coin.id} className="mb-8">
-                        <h4 className="text-slate-500 font-medium text-xl">{coin.name}</h4>
+                        <h4 className="text-sky-800 text-xl">{coin.name}</h4>
                         <p>
-                            <strong className="text-gray-700 mr-2">${coin.current_price.toFixed(2)}</strong>{' '}
+                            <strong className="mr-2">${coin.current_price.toFixed(2)}</strong>{' '}
                             {coin.price_change_percentage_24h.toFixed(2)}%
                         </p>
                     </li>
