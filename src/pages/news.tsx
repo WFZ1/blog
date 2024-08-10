@@ -23,7 +23,7 @@ const NewsPage = ({ data }: PageProps<DataProps>) => {
 
     return (
         <Layout>
-            <ul>
+            <ul className="list-none">
                 {articles.map((article) => {
                     return (
                         <li key={article.url} className="mb-10">

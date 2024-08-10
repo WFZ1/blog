@@ -32,7 +32,7 @@ const CurrencyPage = ({ serverData }: CurrencyPageProps) => {
 
     return (
         <Layout>
-            <ul>
+            <ul className="list-none">
                 {coins.map((coin) => (
                     <li key={coin.id} className="mb-8">
                         <h4 className="text-sky-800 text-xl">{coin.name}</h4>

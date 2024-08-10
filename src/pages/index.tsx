@@ -36,7 +36,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
     return (
         <Layout>
             <Bio />
-            <ul className="mt-10">
+            <ul className="mt-10 list-none">
                 {posts.map((post) => {
                     return (
                         <li key={post.id} className="mb-10">
