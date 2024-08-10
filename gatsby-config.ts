@@ -48,6 +48,7 @@ const config: GatsbyConfig = {
                             maxWidth: 700,
                         },
                     },
+                    `gatsby-remark-prismjs`,
                 ],
             },
         },
