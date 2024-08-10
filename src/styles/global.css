@@ -92,7 +92,7 @@ ul,
 ol {
     @apply mb-8 list-inside list-image-none;
 
-    list-style: auto;
+    list-style-type: auto;
 }
 
 ul li,
@@ -113,7 +113,7 @@ li > ul {
 }
 
 blockquote {
-    @apply ml-0 mr-8 mb-8 pl-4 text-xl italic text-gray-500 border-l-4 border-solid border-sky-500;
+    @apply ml-0 mr-8 mb-8 sm:-ml-6 pl-4 sm:pl-6 text-xl italic text-gray-500 border-l-4 border-solid border-sky-500;
 }
 
 blockquote > :last-child {
@@ -137,16 +137,4 @@ table thead tr th {
 
 a {
     @apply text-sky-500;
-}
-
-/* Media queries */
-
-@media (min-width: 42rem) {
-    blockquote {
-        @apply -ml-6 pl-6;
-    }
-    ul,
-    ol {
-        @apply list-outside;
-    }
 }
