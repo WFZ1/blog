@@ -35,6 +35,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
 
     return (
         <Layout>
+            Hello world
             <Bio />
             <ul className="mt-10 list-none">
                 {posts.map((post) => {
