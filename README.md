@@ -1,3 +1,6 @@
+Simple blog app made with **Gatsby**.  
+Deployed to **Netlify** and **AWS**.
+
 ## Hosting
 
 Netlify: https://blog11111.netlify.app/  
