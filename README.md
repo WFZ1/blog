@@ -1,49 +1,28 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+Simple blog app made with **Gatsby**.  
+Deployed to **Netlify** and **AWS**.
 
-## 🚀 Quick start
+## Hosting
 
-1.  **Create a Gatsby site.**
+Netlify: https://blog11111.netlify.app/  
+AWS CloudFront: https://d16tnwmd5nxnrh.cloudfront.net/ (**Currency** page doesn\`t work)  
+AWS Amplify: https://homework.d30ykqhphozwql.amplifyapp.com/ (**Currency** page doesn`t work)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Run app
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+1. go to app folder `cd app`
+2. install dependencies `npm i`
+3. run `npm start`
 
-2.  **Start developing.**
+## Setup AWS
 
-    Navigate into your new site’s directory and start it up.
+1. Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+2. Run `aws configure` in terminal and paste AWS Keys (Access Key ID, Secret Access Key) that you had created before with [IAM console -> User -> Security credentials -> Access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html?icmpid=docs_iam_console#Using_CreateAccessKey)
+3. Add these keys to repository settings -> Security (Security and Variables) -> Repository secrets. They will be used by ci/cd.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Manually Deployment Instructions to AWS
 
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+1. go to infrastructure folder `cd infrastructure`
+2. install dependencies `npm i`
+3. provise specific AWS resources in your environment that are used by the AWS CDK `npm run bootstrap` (this step is required only once)
+4. generate the CloudFormation template for your stack `npm run synth`
+5. deploy your stack to AWS `npm run deploy`

@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HTML elements */
+
+html {
+    @apply h-full text-[16px] leading-normal antialiased;
+}
+
+body {
+    @apply h-full text-base text-gray-700;
+
+    font-family: 'Noto Serif', serif;
+}
+
+hr {
+    @apply h-px bg-gray-100 border-0;
+}
+
+/* Gatsby classes */
+
+#___gatsby {
+    @apply h-full;
+}
+
+#___gatsby > * {
+    @apply flex h-full flex-col items-center;
+}
+
+/* Heading */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply my-6 tracking-tight;
+
+    font-family: 'Inter', sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-bold text-gray-900;
+}
+
+h1 {
+    @apply text-5xl font-black text-black;
+}
+
+h2 {
+    @apply text-4xl;
+}
+
+h3 {
+    @apply text-3xl;
+}
+
+h4 {
+    @apply text-2xl;
+}
+
+h5 {
+    @apply text-xl;
+}
+
+h6 {
+    @apply text-base;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+    @apply text-inherit no-underline;
+}
+
+/* Prose */
+
+p {
+    @apply leading-relaxed mb-8;
+}
+
+ul,
+ol {
+    @apply mb-8 list-inside list-image-none;
+
+    list-style-type: auto;
+}
+
+ul li,
+ol li {
+    @apply pl-0 mb-4;
+}
+
+li > p {
+    @apply mb-4;
+}
+
+li *:last-child {
+    @apply mb-0;
+}
+
+li > ul {
+    @apply ml-8 mt-4;
+}
+
+blockquote {
+    @apply ml-0 mr-8 mb-8 sm:-ml-6 pl-4 sm:pl-6 text-xl italic text-gray-500 border-l-4 border-solid border-sky-500;
+}
+
+blockquote > :last-child {
+    @apply mb-0;
+}
+
+blockquote > ul,
+blockquote > ol {
+    @apply list-inside;
+}
+
+table {
+    @apply w-full mb-8 border-spacing-1;
+}
+
+table thead tr th {
+    @apply border-b border-solid border-gray-100;
+}
+
+/* Link */
+
+a {
+    @apply text-sky-500;
+}
