@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import { Article } from './src/types';
 
 const getFormattedDate = () => {
