@@ -15,7 +15,9 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
 
     try {
         const response = await fetch(
-            `https://newsapi.org/v2/everything?q=frontend AND react&from=${getFormattedDate()}&sortBy=popularity&apiKey=${
+            `${
+                process.env.NEWS_API_URL
+            }/v2/everything?q=frontend AND react&from=${getFormattedDate()}&sortBy=popularity&apiKey=${
                 process.env.NEWS_API_KEY
             }&pageSize=10`
         );
