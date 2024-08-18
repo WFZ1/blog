@@ -5,7 +5,7 @@ Blog application made with **Gatsby** and deployed with using **AWS CDK**.
 - Currency page is served different content for each request for this page (SSR).
 - The application is deployed on AWS S3 and AWS Cloudfront per using the AWS CDK.
 - The application also is deployed to Netlify and AWS Amplify.
-- Full CI/CD using Github Actions
+- Full CI/CD using Github Actions.
 
 ## Hosting
 
