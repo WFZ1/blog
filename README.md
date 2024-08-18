@@ -2,9 +2,9 @@ Simple blog app made with **Gatsby**.
 
 - Blog articles are completely generated from markdown files.
 - News data are received from a third-party API (SSG).
-- Currency page are served different content for each request for this page (SSR).
-- The application are deployed on AWS S3 and AWS Cloudfront per using the AWS CDK.
-- The application also are deployed to Netlify and AWS Amplify.
+- Currency page is served different content for each request for this page (SSR).
+- The application is deployed on AWS S3 and AWS Cloudfront per using the AWS CDK.
+- The application also is deployed to Netlify and AWS Amplify.
 - Full CI/CD using Github Actions
 
 ## Hosting
